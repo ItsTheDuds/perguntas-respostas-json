@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Interativo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    .escondido { display: none; }
+    .alternativa-btn { display: block; width: 100%; margin: 8px 0; padding: 12px; text-align: left; cursor: pointer; }
+    .correta { background-color: #d4edda; font-weight: bold; }
+    .errada { background-color: #f8d7da; }
+    .flex-row { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  
+  <div id="tela-quiz">
+    <div class="flex-row">
+      <h1 id="tema-titulo">Quiz</h1>
+      <span id="contador"></span>
+    </div>
+
+    <p id="pergunta-texto" style="font-size: 1.2em; margin: 20px 0;"></p>
+
+    <div id="alternativas"></div>
+
+    <div class="flex-row" style="margin-top: 20px;">
+      <span id="placar">Pontuação: 0</span>
+      <button id="btn-proxima" disabled>Próxima</button>
+    </div>
+  </div>
+
+  <div id="tela-final" class="escondido" style="text-align: center;">
+    <h2>Quiz finalizado!</h2>
+    <p style="font-size: 1.5em;">Você acertou <span id="resultado-final"></span></p>
+    <button id="btn-reiniciar">Jogar novamente</button>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
